@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .all {
+            width: 980px;
+            height: 1386px;
+            background-color: rgb(248, 244, 246);
+            margin: auto;
+        }
+        .big-box {
+            width: 892px;
+            height: 1360px;
+            margin: auto;
+        }
+
+        .header {
+            width: 892px;
+            height: 61PX;
+            border-bottom: solid;
+            border-width: 2px;
+            border-color: #938e8c;
+        }
+
+        .header .box-left {
+            float: left;
+            width: 110px;
+            height: 100%;
+            background-color: indianred;
+            font-size: 12px;
+            color: #ffffff;
+            font-family: "黑体";
+        }
+
+        .header .box-left span {
+            display: block;
+            padding: 45px 14px 2px 2px;
+        }
+
+        .header .box-right {
+            float: right;
+            width: 110px;
+            height: 61px;
+            font-size: 12px;
+            color: #d45d5c;
+            font-family: "黑体";
+        }
+
+        .header .box-right span {
+            display: block;
+            padding: 45px 3px 2px 60px;
+        }
+
+        .body1 {
+            width: 892px;
+            height: 321px;
+            margin-top: 10px;
+
+        }
+
+        .body1-left {
+            float: left;
+            width: 641px;
+            height: 301px;
+            position: relative;
+            margin: 20px 0px 0px 0px;
+        }
+
+        .left-float {
+            width: 191px;
+            height: 301px;
+            background-color: rgb(111, 233, 152, 0.3);
+            position: absolute;
+            left: 0;
+        }
+
+        .right-float {
+            width: 191px;
+            height: 301px;
+            background-color: rgba(250, 102, 147, 0.3);
+            position: absolute;
+            right: 0;
+        }
+
+        .body1-right {
+            float: right;
+            border-top: solid;
+            border-color: #cc8091;
+            width: 203px;
+            height: 301px;
+            margin: 20px 0px 0px 0px;
+        }
+
+        .first {
+            text-decoration: underline;
+            font-size: 24px;
+            font-family: "微软雅黑";
+            color: #000000;
+            line-height: 40px;
+        }
+
+        .first span {
+            font-size: 30px;
+            font-weight: 600;
+        }
+
+        .second {
+            font-size: 12px;
+            font-family: "楷体";
+            color: #676767;
+            line-height: 10px;
+        }
+
+        .body1-d {
+            font: italic 600 116px 'microsoft yahei';
+            color: #75b86b;
+            margin-top: -15px;
+            margin-left: -30px;
+
+        }
+
+        .body1-f {
+            height: 55px;
+            width: 150px;
+            color: #cc8091;
+            margin-top: -15px;
+        }
+
+        .body1-f1 {
+            float: left;
+            font: 55px 'microsoft yahei';
+        }
+
+        .body1-r1 {
+            float: left;
+            font: 21px 'microsoft yahei';
+            margin-top: 25px;
+        }
+
+        .body1-r2 {
+            float: left;
+            font: 12px 'microsoft yahei';
+            margin-top: -8px;
+        }
+
+        .body2 {
+            width: 641px;
+            height: 200px;
+            margin-top: 30px;
+        }
+
+        .body2-left {
+            float: left;
+            margin-left: 10px;
+            height: 150px;
+            width: 200px;
+        }
+
+        #what {
+            font: 16px 'microsoft yahei';
+            text-decoration: underline;
+            font-weight: bold;
+            color: #418c59;
+        }
+
+        #when {
+            font: 16px 'microsoft yahei';
+            text-decoration: underline;
+            font-weight: bold;
+            color: #d2994f;
+            margin-left: 16px;
+
+        }
+
+        #how {
+            font: 16px 'microsoft yahei';
+            text-decoration: underline;
+            font-weight: bold;
+            color: #cc7680;
+            margin-left: 16px;
+        }
+
+        .body2-left .p1 {
+            font: 12px "宋体";
+            color: #767777;
+        }
+
+        .body2-left .p2 {
+            font: 12px "microsoft yahei";
+            color: #767777;
+            margin-left: 16px;
+        }
+
+        .what {
+            font: 12px "microsoft yahei";
+            margin-left: 16px;
+        }
+
+        .what .span {
+
+            color: #cd4a48;
+        }
+
+        .left-box {
+            margin-top: 30px;
+        }
+
+        .body3 {
+            height: 620px;
+            width: 892px;
+            margin-top: 40px;
+        }
+
+        .body3-left {
+            float: left;
+            width: 415px;
+            height: 620px;
+        }
+
+        .body3-right {
+            float: right;
+            width: 459px;
+            height: 620px;
+        }
+
+        .body3-f1 {
+            border-bottom: solid;
+            border-width: 2px;
+            width: 415px;
+            height: 180px;
+        }
+
+        .body3-f1 p span {
+            color: #f5e327;
+            font: italic 700 72px "黑体";
+        }
+
+        .body3-f1 .f1 {
+            font-size: 42px;
+            color: #11456b;
+            font-family: "黑体";
+            font-weight: bold;
+        }
+
+        .body3-f1 .f2 {
+            font-size: 33px;
+            color: #11456b;
+            font-family: "黑体";
+            font-weight: bold;
+        }
+
+        .body3-f2 {
+            width: 415px;
+            height: 440px;
+        }
+
+        .body3-f2 img {
+            float: right;
+        }
+
+        .body3-f2 p:first-child:first-letter {
+            font: 70px "microsoft yahei";
+            color: #f5e327;
+            float: left;
+        }
+
+        .body3-f2 p {
+            font: 12px "宋体";
+            line-height: 16px;
+        }
+
+        .body3-r1 {
+            position: relative;
+            width: 458px;
+            height: 275px;
+        }
+        .r1-f1 {
+            position: absolute;
+            bottom: 0px;
+            background-color: rgba(0, 0, 0, 0.5);
+            width: 458px;
+            height: 61px;
+        }
+        .f1-f1 {
+            float: left;
+            color: #72b16a;
+            font-size: 44px;
+            margin-left: 40px;
+            margin-top: -3px;
+        }
+        .f1-f2 {
+            float: left;
+            color: #ffffff;
+            font: 26px "microsoft yahei";
+            margin-left: 5px;
+            margin-top: 15px;
+        }.f1-f3 {
+            float: left;
+            color: #72b16a;
+            font: 12px "microsoft yahei";
+            font-style: italic;
+            letter-spacing: 150%;
+            margin-top: 30px;
+            margin-left: 5px;
+        }
+        .body3-r2 {
+            width: 459px;
+            height: 318px;
+            background-color: #e5f3c4;
+            margin-top: 20px;
+            position: relative;
+        }
+        .r1-r1 {
+            position: absolute;
+            width: 260px;
+            height: 160px;
+            left: 0px;
+            bottom: 0px;
+            background-color: #f56464;
+        }
+        .body3-r2 ul li {
+            font: 16px "宋体";
+            color: #5a5b5b;
+            margin-top: 35px;
+            margin-left: 30px;
+
+        }
+        .body3-r2 ul li span {
+            font: 14px "宋体";
+            color: #5a5b5b;
+            text-align: right;
+            margin-top: 35px;
+            font-style: italic;
+        }
+        .r1-r1-r1 {
+            font: 110px "microsoft yahei";
+            color: #ffffff;
+            float: left;
+        }
+        .r1-r1-r2 {
+            font: 86px "microsoft yahei";
+            color: #ffffff;
+            width: 2px;
+            float: left;
+        }
+        .r1-r1-r3 {
+            font: 21px "microsoft yahei";
+            color: #ffffff;
+            float: left;
+            margin: 40px 10px 0px 20px;
+        }
+        .r1-r1-r4 {
+            font: 12px "microsoft yahei";
+            color: #ffffff;
+            float: left;
+            margin: 0px 10px 0px 25px;
+        }
+        .r1-r1-r5 {
+            font: 21px "microsoft yahei";
+            color: #ffffff;
+            float: left;
+            margin: 0px 10px 0px 20px;
+        }
+        .r1-r2 {
+            position: absolute;
+            bottom: 0px;
+            right: 0px;
+            width: 160px;
+            height: 160px;
+            font: italic 400 14px "黑体";
+            line-height: 16px;
+            color: #5a5b5b;
+        }
+        .r1-r2>span {
+            color: #d45d5c;
+            font-family: "黑体";
+            font-size: 72px;
+
+        }
+        .footer {
+            width: 892px;
+            height: 61PX;
+            border-top: solid;
+            border-width: 2px;
+            border-color: #938e8c;
+            margin-top: 20px;
+        }
+        .footer .box-right {
+            float: right;
+            width: 110px;
+            height: 61px;
+            font-size: 12px;
+            color: #d45d5c;
+            font-family: "黑体";
+        }
+    </style>
+</head>
+
+<body>
+    <div class="all">
+        <div class="big-box">
+            <div class="header">
+                <div class="box-left"><span>if.baidu.com</span></div>
+                <div class="box-right"><span>2020.10</span></div>
+            </div>
+            <div class="body1">
+                <div class="body1-left">
+                    <div class="left-float"></div>
+                    <div class="right-float"></div>
+                    <img src="http://image2.sina.com.cn/ent/m/c/2003-12-08/U239P28T3D248940F326DT20031208221443.jpg"
+                        width="641px" height="301px">
+                </div>
+                <div class="body1-right">
+                    <p class="first"><span>A</span>BOUT</p>
+                    <p class="first"><span>T</span>ECHNOLOGE</p>
+                    <p class="second">About technologe about technologe</p>
+                    <p class="second">about technologe</p>
+                    <div class="body1-d">700</div>
+                    <div class="body1-f">
+                        <div class="body1-f1">3.2</div>
+                        <div class="body1-r1">css</div>
+                        <div class="body1-r2">csscsscsss</div>
+                    </div>
+                </div>
+            </div>
+            <div class="body2">
+                <div class="body2-left">
+                    <div id="what">what</div>
+                    <p class="p1">
+                        前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端
+                    </p>
+                </div>
+                <div class="body2-left">
+                    <div id="when">when</div>
+                    <p class="p2">
+                        前端前端前端前端前端前端前端前前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端端前端前端前端前端前端前端前端前端前端前端
+                    </p>
+                </div>
+                <div class="body2-left">
+                    <div id="how">how</div>
+                    <p class="p2">前端前端前端前端前端前端前端前端前端前端前端前端前前端前端前端前端前端前端前端前端前端</p>
+                    <div class="left-box">
+                        <div class="what">what-------<span class="span">40%</span></div>
+                        <div class="what">what-------<span class="span">30%</span></div>
+                        <div class="what">what-------<span class="span">30%</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="body3">
+                <div class="body3-left">
+                    <div class="body3-f1">
+                        <p class="f1"><span>THE</span> TECHNOLOGE OF FRONT </p>
+                        <p class="f2">前端技术领域</p>
+                    </div>
+                    <div class="body3-f2">
+                        <p>前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前前端前端前端前端端前端前端前端前端
+                            前端前前端前端前端前端前端前端前端前端前端端前端前端前端前端前端前前端前端前端前端前端前端前端前端前端端前端前端前端前端前端前前端前端前端前端前端
+                            <img src="https://pic.baike.soso.com/ugc/baikepic2/1800/cut-20200601145238-710688497_jpg_341_427_14221.jpg/300"
+                                height="300px">
+                            端端前端前端前端前端前端前前端前端前前端前端前端前端前端前端前端前端前端前端前端前端前端前端前前端前端前端前端端前端前端前端前端前端前前端前端前端前端前端</p>
+                        <p> 前端前端前端前端前端前端前端端前端前端前端前端前端前前端前端前端前端前端前端前端前端前端端前端前端前端前端前端前前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前
+                            端前端前端前端前端前端前端前端前端前端前端前端前端前端端前端前端前端前端前端前前端前端前端前端端前端前端前端前端前端前前端前端前端前端前端</p>
+                        <p>前端前端前端前端前端前端前端端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端端前端前端前端前端前端前前端前端前端前端前端 </p>
+                    </div>
+                </div>
+                <div class="body3-right">
+                    <div class="body3-r1">
+                        <div class="r1-f1">
+                            <div class="f1-f1">|</div>
+                            <div class="f1-f2">前端技术</div>
+                            <div class="f1-f3">前端技术前端技术</div>
+                        </div>
+                        <img src="https://pic.baike.soso.com/ugc/baikepic2/0/ori-20130826144424-771164828.jpg/800"
+                            width="458px" height="275">
+                    </div>
+                    <div class="body3-r2">
+                        <ul>
+                            <li>前端前端前端前端前端前端<span>..........................前端</span></li>
+                            <li>前端前端前端前端<span>...................................前端</span></li>
+                            <li>前端前端前端前端前端前端前端<span>.....................前端</span></li>
+                        </ul>
+                        <div class="r1-r1">
+                            <div class="r1-r1-r1">0</div>
+                            <div class="r1-r1-r2">|</div>
+                            <div class="r1-r1-r3">ONE TWO</div>
+                            <div class="r1-r1-r5">THREE FOUR FI</div>
+                            <div class="r1-r1-r4">hello world hello world</div>
+                            <div class="r1-r1-r4">hello world </div>
+                        </div>
+                        <div class="r1-r2">
+                            <span></span>
+                            <P>hello world hello worldhello world hello worldhello world hello worldhello world hello world</P>
+                            <span></span>
+                        </div>
+                        
+                    </div>
+
+                </div>
+            </div>
+            <div class="footer">
+                <div class="box-right">ife.baidu.com</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
